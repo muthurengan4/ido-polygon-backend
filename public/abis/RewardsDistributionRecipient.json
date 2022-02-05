@@ -1,0 +1,371 @@
+{
+  "contractName": "RewardsDistributionRecipient",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "reward",
+          "type": "uint256"
+        }
+      ],
+      "name": "notifyRewardAmount",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"reward\",\"type\":\"uint256\"}],\"name\":\"notifyRewardAmount\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/aravinth/Repo/codegama/blockchain/ido_projects/ido-frontend-jason/src/contracts/RewardsDistributionRecipient.sol\":\"RewardsDistributionRecipient\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/aravinth/Repo/codegama/blockchain/ido_projects/ido-frontend-jason/src/contracts/RewardsDistributionRecipient.sol\":{\"keccak256\":\"0x4eebea55b55ee3c4d925f59cb6010a389bca471e3441ffc29d63813d68c66c6f\",\"urls\":[\"bzz-raw://45fb0a7535579643fcd38cc273c718e5d585ccc4b11a955df9833607908b05b8\",\"dweb:/ipfs/QmYajeviek9ujbfn9LFvvwPNfQpWnq3vrnj9gfvRba8jG9\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xa1b27b3f44ff825974e5268e8f63ad3b03add5b464880d860fbb8cae043e17f7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ad0fb4425453220f15bdb8c4e009052839804bb725797b6d8c02ee2271bc3c23\",\"dweb:/ipfs/QmPtjdMxzEifPUEUa6cKX1yfTWjaZV6QtdwMdN6bEL9FBM\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x7736c187e6f1358c1ea9350a2a21aa8528dec1c2f43b374a9067465a3a51f5d3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4fd625dca17657403af518cc6c8ab5c54c58898cf6e912ca2e1b0f3194ad0405\",\"dweb:/ipfs/QmQVv7YeeKmaS11bg7YDTeeGDk6i7sV8LMMfohaLM4SiRu\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.8.2;\n\n// Inheritance\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\n// https://docs.synthetix.io/contracts/source/contracts/rewardsdistributionrecipient\nabstract contract RewardsDistributionRecipient is Ownable {\n    function notifyRewardAmount(uint256 reward) external virtual;\n}\n",
+  "sourcePath": "/Users/aravinth/Repo/codegama/blockchain/ido_projects/ido-frontend-jason/src/contracts/RewardsDistributionRecipient.sol",
+  "ast": {
+    "absolutePath": "/Users/aravinth/Repo/codegama/blockchain/ido_projects/ido-frontend-jason/src/contracts/RewardsDistributionRecipient.sol",
+    "exportedSymbols": {
+      "Context": [
+        2480
+      ],
+      "Ownable": [
+        1677
+      ],
+      "RewardsDistributionRecipient": [
+        1190
+      ]
+    },
+    "id": 1191,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1181,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
+        "file": "@openzeppelin/contracts/access/Ownable.sol",
+        "id": 1182,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1191,
+        "sourceUnit": 1678,
+        "src": "40:52:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1183,
+              "name": "Ownable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1677,
+              "src": "229:7:2"
+            },
+            "id": 1184,
+            "nodeType": "InheritanceSpecifier",
+            "src": "229:7:2"
+          }
+        ],
+        "canonicalName": "RewardsDistributionRecipient",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 1190,
+        "linearizedBaseContracts": [
+          1190,
+          1677,
+          2480
+        ],
+        "name": "RewardsDistributionRecipient",
+        "nameLocation": "197:28:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "3c6b16ab",
+            "id": 1189,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "notifyRewardAmount",
+            "nameLocation": "252:18:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1187,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1186,
+                  "mutability": "mutable",
+                  "name": "reward",
+                  "nameLocation": "279:6:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1189,
+                  "src": "271:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1185,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "271:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "270:16:2"
+            },
+            "returnParameters": {
+              "id": 1188,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "303:0:2"
+            },
+            "scope": 1190,
+            "src": "243:61:2",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1191,
+        "src": "179:127:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:307:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/aravinth/Repo/codegama/blockchain/ido_projects/ido-frontend-jason/src/contracts/RewardsDistributionRecipient.sol",
+    "exportedSymbols": {
+      "Context": [
+        2480
+      ],
+      "Ownable": [
+        1677
+      ],
+      "RewardsDistributionRecipient": [
+        1190
+      ]
+    },
+    "id": 1191,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1181,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
+        "file": "@openzeppelin/contracts/access/Ownable.sol",
+        "id": 1182,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1191,
+        "sourceUnit": 1678,
+        "src": "40:52:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1183,
+              "name": "Ownable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1677,
+              "src": "229:7:2"
+            },
+            "id": 1184,
+            "nodeType": "InheritanceSpecifier",
+            "src": "229:7:2"
+          }
+        ],
+        "canonicalName": "RewardsDistributionRecipient",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 1190,
+        "linearizedBaseContracts": [
+          1190,
+          1677,
+          2480
+        ],
+        "name": "RewardsDistributionRecipient",
+        "nameLocation": "197:28:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "3c6b16ab",
+            "id": 1189,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "notifyRewardAmount",
+            "nameLocation": "252:18:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1187,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1186,
+                  "mutability": "mutable",
+                  "name": "reward",
+                  "nameLocation": "279:6:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1189,
+                  "src": "271:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1185,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "271:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "270:16:2"
+            },
+            "returnParameters": {
+              "id": 1188,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "303:0:2"
+            },
+            "scope": 1190,
+            "src": "243:61:2",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1191,
+        "src": "179:127:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:307:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-12-28T17:30:12.608Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
